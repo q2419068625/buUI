@@ -22,5 +22,8 @@
   "homepage": "https://github.com/q2419068625/buUI#readme",
   "dependencies": {
     "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
   }
 }
