@@ -1,29 +1,36 @@
 {
-  "name": "buui",
-  "version": "0.0.1",
-  "description": "这是一个UI框架",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/q2419068625/buUI.git"
-  },
-  "keywords": [
-    "vue",
-    "ui"
-  ],
-  "author": "大补",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/q2419068625/buUI/issues"
-  },
-  "homepage": "https://github.com/q2419068625/buUI#readme",
-  "dependencies": {
-    "vue": "^2.6.12"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
-  }
+    "name": "buui",
+    "version": "0.0.1",
+    "description": "这是一个UI框架",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/q2419068625/buUI.git"
+    },
+    "keywords": [
+        "vue",
+        "ui"
+    ],
+    "author": "大补",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/q2419068625/buUI/issues"
+    },
+    "homepage": "https://github.com/q2419068625/buUI#readme",
+    "dependencies": {
+        "vue": "^2.6.12",
+        "vue-hot-reload-api": "^2.3.4"
+    },
+    "devDependencies": {
+        "@vue/component-compiler-utils": "^3.2.0",
+        "parcel-bundler": "^1.12.4",
+        "sass": "^1.30.0",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "alias": {
+        "vue": "./node_modules/vue/dist/vue.common.js"
+    }
 }
