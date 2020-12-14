@@ -1,0 +1,23 @@
+{
+  "name": "buui",
+  "version": "0.0.1",
+  "description": "这是一个UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/q2419068625/buUI.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "大补",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/q2419068625/buUI/issues"
+  },
+  "homepage": "https://github.com/q2419068625/buUI#readme"
+}
