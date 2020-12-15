@@ -11,7 +11,18 @@
 <script>
 export default {
   //用props 接收设置icon 属性
-  props:['icon','iconPosition']
+  // props:['icon','iconPosition']
+  props:{
+    icon:{},
+    iconPosition:{
+      type:String,
+      default:'left',
+      validator(value){
+        // console.log(value);
+        return value !== 'left' && value !== 'right' ? false : true 
+      }
+    }
+  }
 };
 </script>
 
