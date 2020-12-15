@@ -1,6 +1,6 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-      <g-icon v-if="icon" :name="icon" ></g-icon>
+      <g-icon class="icon" v-if="icon" :name="icon" ></g-icon>
       <!-- 用插槽自定义显示文字 -->
       <div class="content">
         <slot></slot>
