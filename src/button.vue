@@ -1,6 +1,7 @@
 <template>
     <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
       <g-icon class="icon" v-if="icon" :name="icon" ></g-icon>
+      <g-icon class="loading" name="loading" ></g-icon>
       <!-- 用插槽自定义显示文字 -->
       <div class="content">
         <slot></slot>
@@ -27,6 +28,10 @@ export default {
 </script>
 
 <style lang="scss">
+@keyframes spin{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
 .g-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -62,6 +67,6 @@ export default {
     }
     >.icon{order: 2; margin-left: .1em; margin-right: 0;}
   }
-
+  .loading{animation: spin 2s infinite linear;}
 }
 </style>
