@@ -1,6 +1,6 @@
 <template>
     <button @click="$emit('click')"  class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-      <g-icon class="icon" v-if="icon" :name="icon" ></g-icon>
+      <g-icon class="icon" v-if="icon && !loading" :name="icon" ></g-icon>
       <g-icon class="loading icon" v-if="loading" name="loading" ></g-icon>
       <!-- 用插槽自定义显示文字 -->
       <div class="content">
