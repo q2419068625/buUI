@@ -10,9 +10,13 @@
 </template>
 
 <script>
+import Icon from './icon.vue'
 export default {
   //用props 接收设置icon 属性
   // props:['icon','iconPosition']
+  components:{
+    'g-icon':Icon
+  },
   props:{
     icon:{},
     loading:{
