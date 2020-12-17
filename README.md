@@ -1,5 +1,6 @@
 # buUI - 一个Vue UI 组件
 [![Build Status](https://www.travis-ci.org/q2419068625/buUI.svg?branch=main)](https://www.travis-ci.org/q2419068625/buUI)
+
 作者：大补
 
 ## 介绍
@@ -35,7 +36,7 @@
     ```
     import {Button, ButtonGroup, Icon} from 'buui';
     import 'buui/dist/index.css';
-    
+
         export default {
         name: 'App',
         components: {
