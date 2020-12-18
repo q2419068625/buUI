@@ -28,24 +28,40 @@
     #app {
         margin: 20px;
     }
+    
+    .box {
+        margin: 20px;
+    }
 </style>
 
 <body>
     <div id="app">
-        <g-button>按钮</g-button>
-        <g-button icon="settings">按钮</g-button>
-        <g-button icon="loading">按钮</g-button>
-        <g-button icon="thumbs-up">按钮</g-button>
-        <g-button icon="download">按钮</g-button>
-        <g-button icon="down">按钮</g-button>
-        <g-button :loading="loading2" @click="loading2 = !loading2" icon-position="right">按钮</g-button>
-        <g-button :loading="loading1" @click="loading1 = !loading1" icon-position="right">按钮</g-button>
-        <g-button-group>
-            <g-button icon="left">按钮</g-button>
-            <g-button>更多</g-button>
-            <g-button icon="right" icon-position="right">按钮</g-button>
-        </g-button-group>
-        <div id="test"></div>
+
+        <div class="box">
+            <g-input value="张三"></g-input>
+            <g-input value="李四" readonly></g-input>
+            <g-input value="王五" disabled></g-input>
+        </div>
+        <div class="box">
+            <g-input value="王五" error="姓名不能少于两个字"></g-input>
+
+        </div>
+
+        <div class="box">
+            <g-button>按钮</g-button>
+            <g-button icon="settings">按钮</g-button>
+            <g-button icon="loading">按钮</g-button>
+            <g-button icon="thumbs-up">按钮</g-button>
+            <g-button icon="download">按钮</g-button>
+            <g-button icon="down">按钮</g-button>
+            <g-button :loading="loading2" @click="loading2 = !loading2" icon-position="right">按钮</g-button>
+            <g-button :loading="loading1" @click="loading1 = !loading1" icon-position="right">按钮</g-button>
+            <g-button-group>
+                <g-button icon="left">按钮</g-button>
+                <g-button>更多</g-button>
+                <g-button icon="right" icon-position="right">按钮</g-button>
+            </g-button-group>
+        </div>
     </div>
 </body>
 <script src="./src/app.js"></script>
