@@ -5,6 +5,7 @@
 <script>
 import './svg.js'
 export default {
+    name:'g-icon',
     props:['name']
 }
 </script>
