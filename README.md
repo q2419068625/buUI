@@ -34,15 +34,15 @@
     ```
 3. 引入 buui
     ```
-    import {Button, ButtonGroup, Icon} from 'buui';
+    import {GButton, GButtonGroup, GIcon} from 'buui';
     import 'buui/dist/index.css';
 
         export default {
         name: 'App',
         components: {
-            'g-button':Button,
-            'g-button-group':ButtonGroup,
-            'g-icon':Icon
+            'g-button':GButton,
+            'g-button-group':GButtonGroup,
+            'g-icon':GIcon
         }
     }
     ```
