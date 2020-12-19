@@ -3,10 +3,14 @@ import Button from './button.vue';
 import Icon from './icon.vue';
 import ButtonGroup from './button-group.vue';
 import Input from './input.vue';
+import Row from './row.vue';
+import Col from './Col.vue';
 Vue.component('g-button', Button) //全局Button组件
 Vue.component('g-icon', Icon) //全局Icon组件
 Vue.component('g-button-group', ButtonGroup) //全局ButtonGroup组件
-Vue.component('g-input', Input) //全局iNPUT组件
+Vue.component('g-input', Input) //全局Input组件
+Vue.component('g-row', Row) //全局Row组件
+Vue.component('g-col', Col) //全局Col组件
 new Vue({
     el: '#app',
     data: {
