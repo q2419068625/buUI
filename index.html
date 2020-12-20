@@ -32,50 +32,31 @@
     .box {
         margin: 20px;
     }
+    
+    .demo {
+        height: 100px;
+        background: #666;
+        border: 1px solid #000;
+    }
 </style>
 
 <body>
     <div id="app">
-        <div style="border: 1px solid black;">
-            <g-row gutter="20">
-                <g-col span="24" :ipad="{span:8}" :narrow-pc="{span:4}" :pc="{span:2}" :wide-pc="{span:1}">1</g-col>
-                <g-col span="24" :ipad="{span:16}" :narrow-pc="{span:20}" :pc="{span:22}" :wide-pc="{span:23}">2</g-col>
+        <div>
+            <g-row>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
+                <g-col span="24" :narrow-pc="{span:8}">
+                    <div class="demo"></div>
+                </g-col>
             </g-row>
-            <!-- <g-row gutter="20">
-                <g-col span="2" :phone="{span:12}">1</g-col>
-                <g-col span="20" :offset="2" :phone="{span:12,offset:0}">2</g-col>
-                <g-col>3</g-col>
-            </g-row> -->
-        </div>
-
-        <div class="box">
-            <g-input value="张三" @change="inputChange"></g-input>
-            <g-input value="李四" readonly></g-input>
-            <g-input value="王五" disabled></g-input>
-        </div>
-        <div class="box">
-            <g-input value="王五" error="姓名不能少于两个字"></g-input>
-        </div>
-        <div class="box">
-            <g-input v-model="message"></g-input>
-            <p>{{message}}</p>
-            <button @click="message+=1">+1</button>
-        </div>
-
-        <div class="box">
-            <g-button>按钮</g-button>
-            <g-button icon="settings">按钮</g-button>
-            <g-button icon="loading">按钮</g-button>
-            <g-button icon="thumbs-up">按钮</g-button>
-            <g-button icon="download">按钮</g-button>
-            <g-button icon="down">按钮</g-button>
-            <g-button :loading="loading2" @click="loading2 = !loading2" icon-position="right">按钮</g-button>
-            <g-button :loading="loading1" @click="loading1 = !loading1" icon-position="right">按钮</g-button>
-            <g-button-group>
-                <g-button icon="left">按钮</g-button>
-                <g-button>更多</g-button>
-                <g-button icon="right" icon-position="right">按钮</g-button>
-            </g-button-group>
         </div>
     </div>
 </body>
