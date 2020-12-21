@@ -59,7 +59,7 @@ export default {
        ...createClasses(ipad,'ipad-'),
        ...createClasses(narrowPc,'narrow-pc-'),
        ...createClasses(pc,'pc-'),
-       ...createClasses(widePc,'wide-pc'),
+       ...createClasses(widePc,'wide-pc-'),
       ];
     },
     cloStyle() {
