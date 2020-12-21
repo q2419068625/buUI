@@ -10,6 +10,7 @@ import Header from './header.vue';
 import Content from './content.vue';
 import Footer from './footer.vue';
 import Sider from './sider.vue';
+import plugin from './plugin.js'
 Vue.component('g-button', Button) //全局Button组件
 Vue.component('g-icon', Icon) //全局Icon组件
 Vue.component('g-button-group', ButtonGroup) //全局ButtonGroup组件
@@ -21,6 +22,10 @@ Vue.component('g-header', Header) //全局Header组件
 Vue.component('g-content', Content) //全局Content组件
 Vue.component('g-footer', Footer) //全局Footer组件
 Vue.component('g-sider', Sider) //全局Sider组件
+Vue.use(plugin)
+
+
+
 new Vue({
     el: '#app',
     data: {
@@ -29,10 +34,11 @@ new Vue({
         message: 'hi'
     },
     methods: {
-        inputChange() {
-            console.log(1);
+        showToast() {
+            this.$toast('我是toast')
         }
-    }
+    },
+    created() {}
 })
 
 import chai from 'chai';
