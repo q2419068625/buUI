@@ -10,7 +10,10 @@ import Header from './header.vue';
 import Content from './content.vue';
 import Footer from './footer.vue';
 import Sider from './sider.vue';
+import Toast from './toast.vue';
 import plugin from './plugin.js'
+
+
 Vue.component('g-button', Button) //全局Button组件
 Vue.component('g-icon', Icon) //全局Icon组件
 Vue.component('g-button-group', ButtonGroup) //全局ButtonGroup组件
@@ -22,6 +25,7 @@ Vue.component('g-header', Header) //全局Header组件
 Vue.component('g-content', Content) //全局Content组件
 Vue.component('g-footer', Footer) //全局Footer组件
 Vue.component('g-sider', Sider) //全局Sider组件
+Vue.component('g-toast', Toast) //全局Toast组件
 Vue.use(plugin)
 
 
@@ -34,11 +38,11 @@ new Vue({
         message: 'hi'
     },
     methods: {
-        showToast() {
-            this.$toast('我是toast')
-        }
+        showToast() {}
     },
-    created() {}
+    created() {
+        this.$toast('<p>123456<a href="www.qq.com">123456<a href="www.qq.com">qq.co<p>123456<a href="www.qq.com">123456<a href="www.qq.com">qq.<p>123456<a href="www.qq.com">123456<a href="www.qq.com">qq.m</a></p>', {})
+    }
 })
 
 import chai from 'chai';
@@ -47,97 +51,3 @@ import spies from 'chai-spies';
 chai.use(spies)
 
 const expect = chai.expect;
-
-
-try {
-    //单元测试
-    {
-        const Constructor = Vue.extend(Button);
-        const vm = new Constructor({
-            propsData: {
-                icon: 'settings'
-            }
-        })
-        vm.$mount();
-        let useElement = vm.$el.querySelector("use");
-        let href = useElement.getAttribute('xlink:href');
-        expect(href).to.eq('#i-settings');
-        vm.$el.remove();
-        vm.$destroy()
-    }
-
-    {
-        const Constructor = Vue.extend(Button);
-        const vm = new Constructor({
-            propsData: {
-                icon: 'settings',
-                loading: true
-            }
-        })
-        vm.$mount();
-        let useElement = vm.$el.querySelector("use");
-        let href = useElement.getAttribute('xlink:href');
-        expect(href).to.eq('#i-loading');
-        vm.$el.remove();
-        vm.$destroy()
-    }
-
-    {
-        const div = document.createElement('div');
-        document.body.appendChild(div);
-
-        const Constructor = Vue.extend(Button);
-        const vm = new Constructor({
-            propsData: {
-                icon: 'settings'
-            }
-        })
-        vm.$mount(div);
-        let svg = vm.$el.querySelector("svg");
-        let { order } = window.getComputedStyle(svg);
-        expect(order).to.eq("1");
-        vm.$el.remove();
-        vm.$destroy()
-    }
-
-    {
-        const div = document.createElement('div');
-        document.body.appendChild(div);
-
-        const Constructor = Vue.extend(Button);
-        const vm = new Constructor({
-            propsData: {
-                icon: 'settings',
-                iconPosition: 'right'
-            }
-        })
-        vm.$mount(div);
-        let svg = vm.$el.querySelector("svg");
-        let { order } = window.getComputedStyle(svg);
-        expect(order).to.eq("2");
-        vm.$el.remove();
-        vm.$destroy()
-    }
-
-    {
-        const Constructor = Vue.extend(Button);
-        const vm = new Constructor({
-            propsData: {
-                icon: 'settings'
-            }
-        })
-        vm.$mount();
-        let spy = chai.spy(function() {})
-        vm.$on('click', spy);
-        //希望这个函数被执行
-        let button = vm.$el;
-        button.click();
-        expect(spy).to.have.been.called();
-    }
-} catch (error) {
-    window.errors = [error];
-} finally {
-    window.errors && window.errors.forEach((error) => {
-        console.error(error.message);
-    })
-}
