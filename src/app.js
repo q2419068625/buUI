@@ -41,7 +41,18 @@ new Vue({
         showToast() {}
     },
     created() {
-        this.$toast('<p>123456<a href="www.qq.com">123456<a href="www.qq.com">qq.co<p>123456<a href="www.qq.com">123456<a href="www.qq.com">qq.<p>123456<a href="www.qq.com">123456<a href="www.qq.com">qq.m</a></p>', {})
+        this.$toast('123', {
+            closeButton: {
+                text: '已充值',
+                callback() {
+                    console.log('他说已充值');
+                }
+            },
+            position: 'top',
+            enableHtml: false,
+            autoClose: false,
+            autoCloseDelay: 3
+        })
     }
 })
 
