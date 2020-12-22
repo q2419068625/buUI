@@ -38,7 +38,16 @@ new Vue({
         message: 'hi'
     },
     methods: {
-        showToast() {
+        showToast1() {
+            this.showToast('top')
+        },
+        showToast2() {
+            this.showToast('middle')
+        },
+        showToast3() {
+            this.showToast('bottom')
+        },
+        showToast(position) {
             this.$toast('123', {
                 closeButton: {
                     text: `${parseInt(Math.random()*100)}已充值`,
@@ -46,7 +55,7 @@ new Vue({
                         console.log('他说已充值');
                     }
                 },
-                position: 'top',
+                position,
                 enableHtml: false,
                 autoClose: false,
                 autoCloseDelay: 3
