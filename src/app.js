@@ -38,21 +38,23 @@ new Vue({
         message: 'hi'
     },
     methods: {
-        showToast() {}
+        showToast() {
+            this.$toast('123', {
+                closeButton: {
+                    text: `${parseInt(Math.random()*100)}已充值`,
+                    callback() {
+                        console.log('他说已充值');
+                    }
+                },
+                position: 'top',
+                enableHtml: false,
+                autoClose: false,
+                autoCloseDelay: 3
+            })
+        }
     },
     created() {
-        this.$toast('123', {
-            closeButton: {
-                text: '已充值',
-                callback() {
-                    console.log('他说已充值');
-                }
-            },
-            position: 'top',
-            enableHtml: false,
-            autoClose: false,
-            autoCloseDelay: 3
-        })
+
     }
 })
 
