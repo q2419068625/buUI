@@ -4,7 +4,11 @@
 
 <script>
 export default {
-    name:'Gtabs-body'
+    name:'Gtabs-body',
+    inject:['eventBus'],
+    created(){
+        
+    }
 }
 </script>
 
