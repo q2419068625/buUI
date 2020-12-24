@@ -12,6 +12,11 @@ import Footer from "./footer.vue";
 import Sider from "./sider.vue";
 import Toast from "./toast.vue";
 import plugin from "./plugin.js";
+import Tabs from "./tabs.vue";
+import TabsHead from "./tabs-head.vue";
+import TabsBody from "./tabs-body.vue";
+import TabsItem from "./tabs-item.vue";
+import TabsPane from "./tabs-pane.vue";
 
 Vue.component("g-button", Button); //全局Button组件
 Vue.component("g-icon", Icon); //全局Icon组件
@@ -26,13 +31,20 @@ Vue.component("g-footer", Footer); //全局Footer组件
 Vue.component("g-sider", Sider); //全局Sider组件
 Vue.component("g-toast", Toast); //全局Toast组件
 Vue.use(plugin);
+Vue.component('g-tabs',Tabs)
+Vue.component('g-tabs-head',TabsHead)
+Vue.component('g-tabs-body',TabsBody)
+Vue.component('g-tabs-item',TabsItem)
+Vue.component('g-tabs-pane',TabsPane)
+
+
+
+
 
 new Vue({
   el: "#app",
   data: {
-    loading1: false,
-    loading2: false,
-    message: "hi",
+   selectedTab:'sports'
   },
   methods: {
     showToast1() {
