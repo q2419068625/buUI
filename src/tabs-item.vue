@@ -1,5 +1,5 @@
 <template>
-   <div class="tabs-item" :class="classes" @click="xxx" > 
+   <div class="tabs-item" :class="classes" @click="onClick" > 
        <slot></slot>
     </div>
 </template>
@@ -9,7 +9,7 @@ export default {
     name:'GtabsItem',
     data(){
         return{
-            active:false
+            active:false,
         }
     },
     props:{
@@ -24,14 +24,17 @@ export default {
     },
     inject:['eventBus'],
     methods:{
-        xxx(){
-            this.eventBus.$emit('update:selected',this.name,this)
+        onClick(){
+            if(this.disabled){return}
+            this.eventBus.$emit('update:selected',this.name,this);
+
         }
     },
     computed: {
         classes() {
             return {
-                active:this.active
+                active:this.active,
+                disabled:this.disabled
             }
         }
     },
@@ -45,6 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 $blue:blue;
+$disabled-text-color:grey;
 .tabs-item{
     flex-shrink: 0;
     padding: 0 1em;
@@ -55,6 +59,9 @@ $blue:blue;
     &.active{
         color: $blue;
         font-weight: bold;
+    }
+    &.disabled{
+        color: $disabled-text-color;
     }
 }
 </style>
