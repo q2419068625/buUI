@@ -14,8 +14,9 @@ export default {
     inject:['eventBus'],
     created(){
         this.eventBus.$on('update:selected',(item,vm)=>{
-            console.log(item);
-            console.log(vm);
+            let {width,height,top,left} =  vm.$el.getBoundingClientRect()
+            this.$refs.line.style.width = `${width}px`
+            this.$refs.line.style.left = `${left}px`
         })
        
     }
@@ -34,8 +35,8 @@ $blue:blue;
     > .line{
         position: absolute;
         bottom: 0;
-        width: 100px;
         border-bottom: 1px solid $blue;
+        transition: all 300ms;
     }
     > .actions-wrapper{
         margin-left:auto;

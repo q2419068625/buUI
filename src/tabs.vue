@@ -32,9 +32,9 @@ export default {
     mounted(){
        this.$children.forEach((vm)=>{
            if(vm.$options.name === 'GtabsHead'){
-               vm.$children.forEach((item)=>{
-                   if(item.$options.name === 'GtabsItem' && item.name === this.selected){
-                        this.eventBus.$emit('update:selected',this.selected,item)
+               vm.$children.forEach((childVm)=>{
+                   if(childVm.$options.name === 'GtabsItem' && childVm.name === this.selected){
+                        this.eventBus.$emit('update:selected',this.selected,childVm)
                    }
                })
            }
