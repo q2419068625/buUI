@@ -30,9 +30,15 @@ export default {
         }
     },
     mounted(){
-        // this.$emit('update:selected','这是 $emit 出来的事件')
-        this.eventBus.$emit('update:selected',this.selected)
-        // this.$emit('update:selected','xxx')
+       this.$children.forEach((vm)=>{
+           if(vm.$options.name === 'GtabsHead'){
+               vm.$children.forEach((item)=>{
+                   if(item.$options.name === 'GtabsItem' && item.name === this.selected){
+                        this.eventBus.$emit('update:selected',this.selected,item)
+                   }
+               })
+           }
+       })
     }
 }
 </script>
