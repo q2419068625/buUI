@@ -34,13 +34,25 @@
 <body>
     <div id="app" style="padding-top: 100px; padding-left: 100px; border: 1px solid red;">
         <div>
-            <g-popover>
+            <g-popover position="top">
                 <template slot="content">
                     <div>sdfsdfsdfsdfsdfsdfsdfsdggdfgsdfdfddddsdsdfsdfsdfsdfsdf</div>
                 </template>
                 <g-button>点我</g-button>
             </g-popover>
-            <g-popover>
+            <g-popover position="bottom">
+                <template slot="content">
+                    <div>popover内容</div>
+                </template>
+                <g-button>点我</g-button>
+            </g-popover>
+            <g-popover position="left">
+                <template slot="content">
+                    <div>popover内容</div>
+                </template>
+                <g-button>点我</g-button>
+            </g-popover>
+            <g-popover position="right">
                 <template slot="content">
                     <div>popover内容</div>
                 </template>
