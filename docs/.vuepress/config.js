@@ -1,4 +1,5 @@
 module.exports = {
+    base:'/buUI/',
     title: 'buUI',
     description: '一个好用的UI框架',
     themeConfig: {
