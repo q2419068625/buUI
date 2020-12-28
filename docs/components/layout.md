@@ -1,8 +1,8 @@
 ---
-title: Button
+title: Layout
 ---
 
-# 按钮
+# 布局
 # 简单用法
 
 <ClientOnly>

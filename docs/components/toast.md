@@ -1,8 +1,8 @@
 ---
-title: Button
+title: Toast
 ---
 
-# 按钮
+# 提示
 # 简单用法
 
 <ClientOnly>

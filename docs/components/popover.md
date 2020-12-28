@@ -1,8 +1,8 @@
 ---
-title: Button
+title: Popover
 ---
 
-# 按钮
+# 弹出层
 # 简单用法
 
 <ClientOnly>
