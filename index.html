@@ -33,16 +33,9 @@
 
 <body>
     <div id="app" style="padding: 100px;">
-        <g-tabs :selected="'1'">
-            <g-tabs-head>
-              <g-tabs-item name="1">1</g-tabs-item>
-              <g-tabs-item name="2">2</g-tabs-item>
-            </g-tabs-head>
-            <g-tabs-body>
-              <g-tabs-pane name="1">content 1</g-tabs-pane>
-              <g-tabs-pane name="2">content 2</g-tabs-pane>
-            </g-tabs-body>
-          </g-tabs>
+        <g-button @click="$toast('点击弹出提示',{position:'top'})">上方弹出</g-button>
+      <g-button @click="$toast('点击弹出提示', {position:'middle'})">中间弹出</g-button>
+      <g-button @click="$toast('点击弹出提示', {position:'bottom'})">下方弹出</g-button>
     </div>
 </body>
 <script src="./src/app.js"></script>

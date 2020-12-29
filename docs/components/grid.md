@@ -3,10 +3,11 @@ title: Grid
 ---
 
 # 网格
-# 简单用法
 
 <ClientOnly>
-<button-demos></button-demos>
+<grid-demo-1></grid-demo-1>
+<grid-demo-2></grid-demo-2>
+<grid-demo-3></grid-demo-3>
 </ClientOnly>
 
 

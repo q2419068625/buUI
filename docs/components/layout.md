@@ -3,10 +3,11 @@ title: Layout
 ---
 
 # 布局
-# 简单用法
 
 <ClientOnly>
-<button-demos></button-demos>
+<layout-demo-1></layout-demo-1>
+<layout-demo-2></layout-demo-2>
+<layout-demo-3></layout-demo-3>
 </ClientOnly>
 
 

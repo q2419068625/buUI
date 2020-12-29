@@ -1,59 +1,66 @@
-# buUI - 一个Vue UI 组件
-[![Build Status](https://www.travis-ci.org/q2419068625/buUI.svg?branch=main)](https://www.travis-ci.org/q2419068625/buUI)
+# buUI
+
+bu UI 是一个不太一样的 UI 框架。
+
+[官方文档](https://q2419068625.github.io/buUI/)
+
+本 UI 框架是一个「面向源码阅读者」的框架。如果对你有帮助，请不要吝惜你的 star。
+
+也就是说，我制作这个框架的目的就是让前端新人学习轮子的制作思路。所有代码都追求可读性。
+
+你可以通过查看逐个 commit 来学习本框架的制作思路
 
 
+本 UI 框架是基于 Vue 2 实现的。
 
-## 介绍
-这是我在学习 Vue 过程中做的一个 UI 框架，希望对你有用。
-## 开始使用
-1. 添加 CSS 样式
-    使用本框架前，请在CSS中开启  border-box
+注意：本 UI 框架的代码尚未完全完工（目前代码大概完成 50%），请不要在生产环境中使用本 UI 框架。
+# 你能学到什么
+单元测试、覆盖率、持续集成等工程概念
+重构、TDD/BDD、设计模式、单向数据流等技术概念
+Vue 的几乎所有功能，并且是深入理解这些功能，而不是肤浅理解
 
-    ```
-    *,*::before,*::after{box-sizing: border-box;}
-    ```
-    IE 8及以上浏览器都支持此样式。
-    
-    你还需要设置默认颜色灯变量 (后续会改为 SCSS 变量)
-    ```
-    html {
-        --button-height: 32px;
-        --font-size: 14px;
-        --button-bg: white;
-        --button-active-bg: #eee;
-        --border-radius: 4px;
-        --color: #333;
-        --border-color: #999;
-        --border-color-hover: #666;
-    }
-    ```
-    IE 15 及以上浏览器都支持此样式
-2. 安装 buui
-    ```
-    npm i --save buui
-    ```
-3. 引入 buui
-    ```
-    import {GButton, GButtonGroup, GIcon} from 'buui';
-    import 'buui/dist/index.css';
+# 有哪些轮子
 
-        export default {
-        name: 'App',
-        components: {
-            'g-button':GButton,
-            'g-button-group':GButtonGroup,
-            'g-icon':GIcon
-        }
-    }
-    ```
+- 简单轮子：按钮、输入框、网格、布局、Toast、Tabs、Popover、手风琴（代码已完成）
+- 进阶轮子：级联选择、无缝轮播、响应式导航条、分页、表单验证、Table、图片上传、Sticky、Tree、Suggestion、Datepicker（代码未完成）
+- 其他：路由、状态管理（代码未完成）
 
-## 文档
+注意：这只是目前的计划，具体要完成的轮子可能与上面有出入。
 
-## 提问
+1. 使用 Travis CI 进行持续集成
+2. 有丰富的单元测试，项目完成时，期望测试覆盖率超过 90%
+3. 自说明的代码，即使没有注释，你也能看懂
+4. 初期我使用 parcel 构建方便新人上手，后期改为 Vue Cli 3 以实现更多功能
 
-## 变更记录
+# 背景
 
-## 联系方式
+我几年前曾经发表过《[笨办法学前端](https://juejin.im/post/58ef6004ac502e006c16f2d6)》一文， 当时我觉得开源社区里虽然有很多不错的库，但是这些库都是以实用为主，其源码并不适合**新人**阅读。
 
-## 贡献代码
+于是我业余时间用原生 JS 造了几个轮子放在 GitHub，没想到居然有几百人关注，还希望我能发布更详细的教程。
+
+但是我当时并没有时间来做更详细的教程。
+
+现在我终于……还是很忙，不过我决定用每周六和周日来录制「造轮子」的视频。
+
+这一次为了顺应前端的潮流，我直接采用 Vue 2 来造轮子。如果你正在学习 Vue 2，那么轱辘 UI 的源码会非常适合你阅读。
+
+## 视觉稿
+
+本 UI 框架借鉴了一些成熟 UI 框架（如 Framework7、Element UI 和 Ant Design）的外观，简化之后我自己制作了一个[视觉稿](https://www.yuque.com/u29422/gulu/artboards/22283)。
+
+如果你发现视觉稿有什么不足的地方，可以直接在上面留言，我也会看到。
+
+## 源码学习
+
+1. 安装依赖
+
+   ```text
+   yarn install
+   ```
+
+2. 启动 dev server
+
+   ```text
+   yarn serve
+   ```
 

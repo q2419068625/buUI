@@ -28,7 +28,7 @@ export default {
           <div>
             value: {{value}}
           </div>
-        `.replace(/\t+| +/g,'').trim()
+        `.replace(/^ {8}/gm, '').trim()
         }
     }
 }
